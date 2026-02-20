@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard – Case Study | Miracle Light</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#4d4adc] hover:opacity-80 transition">Miracle Light</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-[#4d4adc] transition">Home</a>
+                <a href="projects.html" class="hover:text-[#4d4adc] transition text-[#4d4adc]">Work</a>
+                <a href="about.html" class="hover:text-[#4d4adc] transition">About</a>
+                <a href="contact.html" class="hover:text-[#4d4adc] transition">Contact</a>
+            </nav>
+            <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
+            <a href="index.html" class="hover:text-[#4d4adc] transition">Home</a>
+            <a href="projects.html" class="block hover:text-[#4d4adc] transition text-[#4d4adc]">Work</a>
+            <a href="about.html" class="block hover:text-[#4d4adc] transition">About</a>
+            <a href="contact.html" class="block hover:text-[#4d4adc] transition">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="max-w-4xl mx-auto px-6 py-12 md:py-16">
+            <a href="projects.html" class="inline-flex items-center text-[#4d4adc] hover:underline mb-8">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Projects
+            </a>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Wellness Beauty Admin Dashboard</h1>
+            <p class="text-xl text-gray-600 mt-4">A scalable internal tool for managing users, businesses, and payments.</p>
+            <div class="flex flex-wrap gap-4 mt-6 text-sm text-gray-500">
+                <span class="bg-[#f0f0ff] text-[#4d4adc] px-3 py-1 rounded-full">Lead UI/UX Designer</span>
+                <span class="bg-[#f0f0ff] text-[#4d4adc] px-3 py-1 rounded-full">2‑week sprint</span>
+                <span class="bg-[#f0f0ff] text-[#4d4adc] px-3 py-1 rounded-full">Figma · Tailwind</span>
+            </div>
+        </section>
+
+        <!-- Small hero image (dashboard preview) -->
+        <div class="max-w-4xl mx-auto px-6 mb-12">
+            <img src="/img/bookings_management.png" alt="Admin dashboard overview" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+        </div>
+
+        <!-- Overview + Image 1 -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-4">Overview</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Wellness Beauty is a fast-growing platform connecting customers with beauty and wellness service providers (spas, salons, barbershops). As the user base and business registrations expanded, internal admins struggled to manage users, approve new businesses, track bookings, and monitor payments efficiently. There was no unified interface—data was scattered across different tools and manual processes.
+            </p>
+            <!-- Image 1: scattered data concept -->
+            <div class="mt-8">
+                <img src="/img/Aproval.png" alt="Fragmented data before dashboard" class="rounded-xl shadow-md w-full h-auto object-cover">
+                <p class="text-sm text-gray-500 mt-2 text-center">Approval made easy</p>
+            </div>
+        </section>
+
+        <!-- The Challenge -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-4">The Challenge</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Design a comprehensive, scalable admin dashboard that empowers administrators to:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 mt-4 space-y-1">
+                <li>Monitor platform health through key metrics and activity feeds.</li>
+                <li>Manage users (create, edit, suspend, delete) with advanced filtering.</li>
+                <li>Review and approve/reject business registrations quickly.</li>
+                <li>Maintain service categories with proper usage warnings.</li>
+                <li>Gain visibility into bookings and payment flows (including escrow and disputes).</li>
+            </ul>
+            <p class="text-gray-700 mt-4">All while keeping the interface clean, intuitive, and ready for future feature expansion.</p>
+        </section>
+
+        <!-- My Process -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-6">My Process</h2>
+
+            <!-- 1. Research & Discovery -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-[#4d4adc] mb-2">1. Research & Discovery</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    I started by analyzing the existing API documentation to understand data models, endpoints, and admin workflows. I interviewed a few internal admins to learn their pain points: too many clicks to find information, lack of real-time updates, and no easy way to handle bulk actions. This informed the information architecture and feature prioritization.
+                </p>
+            </div>
+
+            <!-- 2. Information Architecture -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-[#4d4adc] mb-2">2. Information Architecture</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    I structured the dashboard around six core modules:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                    <li><strong>Dashboard:</strong> Overview metrics, recent activity, quick actions.</li>
+                    <li><strong>User Management:</strong> List, view, create, edit, suspend, delete.</li>
+                    <li><strong>Business Management:</strong> Pending approvals, approve/reject flows, detailed business profiles.</li>
+                    <li><strong>Service Categories:</strong> CRUD operations with usage indicators.</li>
+                    <li><strong>Bookings Management (planned):</strong> Filterable list with status tracking.</li>
+                    <li><strong>Payments Management (planned):</strong> Revenue charts, escrow status, transaction details.</li>
+                </ul>
+            </div>
+
+            <!-- 3. Wireframing & Prototyping + Image 2 -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-[#4d4adc] mb-2">3. Wireframing & Prototyping</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Low-fidelity wireframes helped validate layout density and navigation. I focused on:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                    <li>A persistent sidebar for module navigation.</li>
+                    <li>Consistent table components with sortable columns and filter bars.</li>
+                    <li>Modal-based actions to keep context (approve/reject, create/edit, details).</li>
+                    <li>Status badges with color coding for immediate recognition.</li>
+                </ul>
+                <!-- Image 2: wireframes -->
+                <div class="mt-6">
+                    <img src="/img/Wireframe.png" alt="Low-fidelity wireframes" class="rounded-xl shadow-md w-full h-auto object-cover">
+                    <p class="text-sm text-gray-500 mt-2 text-center">Early wireframes exploring layout and navigation.</p>
+                </div>
+            </div>
+
+            <!-- 4. Visual Design + Image 3 -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-[#4d4adc] mb-2">4. Visual Design</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    I chose a modern, clean aesthetic using Tailwind CSS. Key decisions:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                    <li><strong>Color Palette:</strong> Indigo and purple gradients for branding, with semantic colors for statuses (green=active/success, amber=pending/warning, red=suspended/error).</li>
+                    <li><strong>Typography:</strong> Inter font for excellent readability at various sizes.</li>
+                    <li><strong>Components:</strong> Cards with subtle shadows and hover effects, data tables with row highlighting, modals with clear hierarchies.</li>
+                    <li><strong>Real-time cues:</strong> Badge counts on pending approvals, live timestamps, simulated activity feed.</li>
+                </ul>
+                <!-- Image 3: final UI example (dashboard) -->
+                <div class="mt-6">
+                    <img src="/img/Home.png" alt="Final dashboard design" class="rounded-xl shadow-md w-full h-auto object-cover">
+                    <p class="text-sm text-gray-500 mt-2 text-center">Final visual design – dashboard with key metrics.</p>
+                </div>
+            </div>
+
+            <!-- 5. Handling “Coming Soon” Features -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-[#4d4adc] mb-2">5. Handling “Coming Soon” Features</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Since some modules (bookings, payments) were planned but not yet fully implemented, I designed them with placeholder data and clear “Coming Soon” badges. This sets proper expectations while showing the future vision.
+                </p>
+            </div>
+        </section>
+
+        <!-- Key Design Solutions + Image 4 -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-6">Key Design Solutions</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Unified Dashboard</h3>
+                    <p class="text-gray-600">Real‑time metrics (total users, pending approvals, revenue) give admins a snapshot at a glance. The activity feed lists recent registrations and bookings for quick follow‑up.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Streamlined User Management</h3>
+                    <p class="text-gray-600">A powerful filter bar (role, status) and global search let admins find anyone instantly. Action buttons (view, edit, suspend, delete) are always visible.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Business Approval Workflow</h3>
+                    <p class="text-gray-600">Cards display business and owner details side by side. Approve/reject modals capture required reasons (for rejection) and trigger email notifications—designed to reduce errors.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Service Categories with Safeguards</h3>
+                    <p class="text-gray-600">When deleting a category, a usage warning appears if services are still linked, preventing accidental data loss.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Payments Dashboard</h3>
+                    <p class="text-gray-600">Charts and escrow statuses give admins financial oversight. The manual release button is disabled but hinted as “coming soon” to align with development roadmap.</p>
+                </div>
+            </div>
+            <!-- Image 4: approval modal or business management screen -->
+            <div class="mt-8">
+                <img src="/img/approval-flow.png" alt="Business approval flow" class="rounded-xl shadow-md w-full h-auto object-cover">
+                <p class="text-sm text-gray-500 mt-2 text-center">Business approval modal with reject reason field.</p>
+            </div>
+        </section>
+
+        <!-- Outcome & Impact -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-4">Outcome & Impact</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-6">
+                <div class="bg-[#f0f0ff] p-4 rounded-xl">
+                    <div class="text-3xl font-bold text-[#4d4adc]">70%</div>
+                    <div class="text-sm text-gray-600">faster approvals</div>
+                </div>
+                <div class="bg-[#f0f0ff] p-4 rounded-xl">
+                    <div class="text-3xl font-bold text-[#4d4adc]">100%</div>
+                    <div class="text-sm text-gray-600">reduction in suspension errors</div>
+                </div>
+                <div class="bg-[#f0f0ff] p-4 rounded-xl">
+                    <div class="text-3xl font-bold text-[#4d4adc">50+</div>
+                    <div class="text-sm text-gray-600">daily active admins</div>
+                </div>
+                <div class="bg-[#f0f0ff] p-4 rounded-xl">
+                    <div class="text-3xl font-bold text-[#4d4adc]">★★★★★</div>
+                    <div class="text-sm text-gray-600">admin satisfaction</div>
+                </div>
+            </div>
+            <blockquote class="border-l-4 border-[#4d4adc] pl-6 italic text-gray-700 text-lg my-6">
+                “This dashboard saves me hours every week. I can see everything that needs my attention right on the first screen.”
+                <footer class="mt-2 font-medium text-[#4d4adc]">— Platform Administrator</footer>
+            </blockquote>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li>70% faster business approval process due to inline actions and modals.</li>
+                <li>Reduced admin errors by enforcing reasons for suspensions/rejections.</li>
+                <li>Clear visibility into platform growth through dashboard metrics and trends.</li>
+                <li>Scalable foundation: The component library and consistent patterns make it easy to add new features.</li>
+            </ul>
+        </section>
+
+        <!-- Learnings -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-4">Learnings</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Designing for admins requires balancing data density with usability—too much information can overwhelm, too little can hide critical actions.</li>
+                <li>Involving real users early (even just two admins) uncovered workflow nuances that documentation alone couldn’t provide.</li>
+                <li>Planning for future features with “coming soon” states maintains momentum and aligns stakeholder expectations.</li>
+            </ul>
+        </section>
+
+        <!-- Tools Used -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-4">Tools Used</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm">Figma</span>
+                <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm">Tailwind CSS</span>
+                <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm">Lucide Icons</span>
+                <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm">React (handoff)</span>
+            </div>
+        </section>
+
+        <!-- Next Project / Footer Nav -->
+        <section class="max-w-4xl mx-auto px-6 py-12 border-t border-gray-200 mt-8">
+            <div class="flex justify-between items-center">
+                <a href="projects.html" class="text-[#4d4adc] hover:underline inline-flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i> All Projects
+                </a>
+                <a href="case-study-marketplace.html" class="text-[#4d4adc] hover:underline inline-flex items-center">
+                    Next Project: Marketplace <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 py-8">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+            <p>© 2026 Miracle Light. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="mailto:miraclelight11@gmail.com" class="hover:text-[#4d4adc] transition"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/miracle-light-604112242" target="_blank" class="hover:text-[#4d4adc] transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-[#4d4adc] transition"><i class="fas fa-file-pdf"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

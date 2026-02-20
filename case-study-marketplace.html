@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace – Case Study | Miracle Light</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+    <!-- Header (same) -->
+    <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#4d4adc] hover:opacity-80 transition">Miracle Light</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-[#4d4adc] transition">Home</a>
+                <a href="projects.html" class="hover:text-[#4d4adc] transition text-[#4d4adc]">Work</a>
+                <a href="about.html" class="hover:text-[#4d4adc] transition">About</a>
+                <a href="contact.html" class="hover:text-[#4d4adc] transition">Contact</a>
+            </nav>
+            <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
+            <a href="index.html" class="hover:text-[#4d4adc] transition">Home</a>
+            <a href="projects.html" class="block hover:text-[#4d4adc] transition text-[#4d4adc]">Work</a>
+            <a href="about.html" class="block hover:text-[#4d4adc] transition">About</a>
+            <a href="contact.html" class="block hover:text-[#4d4adc] transition">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section (smaller image now) -->
+        <section class="max-w-4xl mx-auto px-6 py-12 md:py-16">
+            <a href="projects.html" class="inline-flex items-center text-[#4d4adc] hover:underline mb-8">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Projects
+            </a>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Marketplace – Wellness & Beauty Booking Platform</h1>
+            <p class="text-xl text-gray-600 mt-4">A centralized platform connecting customers with wellness and beauty businesses across Nigeria.</p>
+            <div class="flex flex-wrap gap-4 mt-6 text-sm text-gray-500">
+                <span class="bg-[#f0f0ff] text-[#4d4adc] px-3 py-1 rounded-full">Lead Product Designer</span>
+                <span class="bg-[#f0f0ff] text-[#4d4adc] px-3 py-1 rounded-full">2024–2025</span>
+                <span class="bg-[#f0f0ff] text-[#4d4adc] px-3 py-1 rounded-full">Web + Mobile</span>
+            </div>
+        </section>
+
+        <!-- Small hero image (still a showcase, but not dominating) -->
+        <div class="max-w-4xl mx-auto px-6 mb-12">
+            <img src="/img/marketplace.png" alt="Marketplace platform showcase" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+        </div>
+
+        <!-- Project Overview + Image 1 -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Marketplace is a centralized platform connecting customers with wellness and beauty businesses across Nigeria (spas, barbershops, hair salons, etc.). It enables location‑based discovery, real‑time booking with staff selection, secure escrow payments, and business management tools. The platform serves three user types: customers, business owners, and platform administrators.
+            </p>
+            <!-- Image 1: Customer app screen -->
+            <div class="mt-8">
+                <img src="/img/book_service.png" alt="Customer booking screen" class="rounded-xl shadow-md w-full h-auto object-cover">
+                <p class="text-sm text-gray-500 mt-2 text-center">Customer webview – booking flow</p>
+            </div>
+        </section>
+
+        <!-- My Role & Challenge (two columns) -->
+        <section class="max-w-4xl mx-auto px-6 py-8 grid md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-2xl font-bold mb-3">My Role</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    As Lead Product Designer, I owned the end‑to‑end design process – from user research and information architecture to high‑fidelity UI and interaction design. I collaborated with the backend team on API requirements and delivered a responsive web design using Tailwind CSS and Lucide icons, ensuring consistency with the Flutter mobile app.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold mb-3">The Challenge</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    The Nigerian wellness industry is fragmented. Customers struggle to find reliable providers, check real‑time availability, or pay securely. Business owners lack online visibility and efficient booking tools. The goal was to build a trusted, scalable platform that streamlines the entire booking‑to‑payment journey for all stakeholders.
+                </p>
+            </div>
+        </section>
+
+        <!-- Design Process -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-6">Design Process</h2>
+
+            <!-- Discovery & Research -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-[#4d4adc] mb-2">1. Discovery & Research</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Conducted interviews with spa owners and customers in Lagos to understand pain points (trust, scheduling conflicts, payment assurance). Analyzed competitors (e.g., Airbnb model for services) to identify opportunities.
+                </p>
+            </div>
+
+            <!-- Information Architecture -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-[#4d4adc] mb-2">2. Information Architecture</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Mapped three core user flows: <strong>Customer</strong> (Search → Select service → Choose staff → Book → Pay → Review); <strong>Business Owner</strong> (Register → Onboard → Pending verification → Manage bookings); <strong>Admin</strong> (Approve businesses → Monitor transactions → Resolve disputes). Structured features into 17 epics, prioritizing MVP.
+                </p>
+            </div>
+
+            <!-- Visual Design -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-[#4d4adc] mb-2">3. Visual Design</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Mobile‑first responsive design with Tailwind CSS, ensuring a seamless experience on phones, tablets, and desktops. Primary color: <span class="font-mono">#f97316</span> (orange) for CTAs and highlights, paired with neutral whites and grays for clarity. Typography: Inter font family for excellent readability. Shadow cards instead of borders to create a fresh, modern card‑based interface. Lucide icons for consistent, recognizable visuals.
+                </p>
+            </div>
+
+            <!-- Key Screens & Interactions + Image 2 -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-[#4d4adc] mb-2">4. Key Screens & Interactions</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Onboarding wizard for businesses with step‑by‑step progress and a pending‑verification dashboard (can edit profile but not accept bookings).</li>
+                    <li>Customer homepage: Location‑based search, category grid, featured businesses, and trending services.</li>
+                    <li>My Bookings screen with tabbed navigation (Upcoming, History, Cancelled) and one‑click calendar integration (Google, Outlook, Yahoo, iCal).</li>
+                    <li>Business settings page with three core sections (User Profile, Business Settings, Notifications) and sidebar navigation for additional options like Security and Payments.</li>
+                    <li>Escrow payment flow with conditional release based on business preferences (before/after service).</li>
+                </ul>
+                <!-- Image 2: Business dashboard -->
+                <div class="mt-8">
+                    <img src="/img/business_dashboard.png" alt="Business owner dashboard" class="rounded-xl shadow-md w-full h-auto object-cover">
+                    <p class="text-sm text-gray-500 mt-2 text-center">Business owner dashboard – manage bookings and staff</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Design Decisions + Image 3 -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-6">Key Design Decisions</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Trust first</h3>
+                    <p class="text-gray-600">Prominent verification badges and a clear pending state for new businesses build user confidence.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Real‑time availability</h3>
+                    <p class="text-gray-600">Duration‑based scheduling with buffer time prevents double‑booking – visual feedback shows customers exactly when slots are free.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Staff management</h3>
+                    <p class="text-gray-600">Customers can pick a preferred staff member or let the system auto‑assign based on skill and availability; staff profiles include ratings and photos.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Calendar integration</h3>
+                    <p class="text-gray-600">After booking, users can add the appointment to their preferred calendar – a small detail that reduces no‑shows.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-2">Mobile‑first</h3>
+                    <p class="text-gray-600">Given Nigeria’s mobile‑dominant usage, the design prioritizes touch targets, bottom navigation, and responsive layouts.</p>
+                </div>
+            </div>
+            <!-- Image 3: Admin dashboard or calendar integration -->
+            <div class="mt-8">
+                <img src="/img/business_profile.png" alt="Business Profile" class="rounded-xl shadow-md w-full h-auto object-cover">
+                <p class="text-sm text-gray-500 mt-2 text-center">Business Profile – Live View</p>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-4">Results & Impact</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-6">
+                <div class="bg-[#f0f0ff] p-4 rounded-xl">
+                    <div class="text-3xl font-bold text-[#4d4adc]">50+</div>
+                    <div class="text-sm text-gray-600">Verified businesses</div>
+                </div>
+                <div class="bg-[#f0f0ff] p-4 rounded-xl">
+                    <div class="text-3xl font-bold text-[#4d4adc]">500+</div>
+                    <div class="text-sm text-gray-600">Customers (month 1)</div>
+                </div>
+                <div class="bg-[#f0f0ff] p-4 rounded-xl">
+                    <div class="text-3xl font-bold text-[#4d4adc]">1,200+</div>
+                    <div class="text-sm text-gray-600">Bookings</div>
+                </div>
+                <div class="bg-[#f0f0ff] p-4 rounded-xl">
+                    <div class="text-3xl font-bold text-[#4d4adc]">4.8★</div>
+                    <div class="text-sm text-gray-600">Avg. rating</div>
+                </div>
+            </div>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li>100% payment success via escrow, with no disputes in the first quarter.</li>
+                <li>30% reduction in no‑shows thanks to automated reminders and calendar sync.</li>
+                <li>Business onboarding time cut from weeks to under two days.</li>
+            </ul>
+        </section>
+
+        <!-- Lessons Learned -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-4">Lessons Learned</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>User trust is paramount – verification and escrow were non‑negotiable.</li>
+                <li>Staff management adds complexity but is a key differentiator for customers.</li>
+                <li>Clear status indicators (pending, confirmed, completed) reduce support queries.</li>
+                <li>Iterative development (monolith → microservices) allows scaling with market growth.</li>
+            </ul>
+        </section>
+
+        <!-- Tools Used -->
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <h2 class="text-3xl font-bold mb-4">Tools Used</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm">Figma</span>
+                <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm">Tailwind CSS</span>
+                <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm">Lucide Icons</span>
+                <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm">React/Next.js</span>
+                <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm">Flutter (collaboration)</span>
+            </div>
+        </section>
+
+        <!-- Next Project / Footer Nav -->
+        <section class="max-w-4xl mx-auto px-6 py-12 border-t border-gray-200 mt-8">
+            <div class="flex justify-between items-center">
+                <a href="projects.html" class="text-[#4d4adc] hover:underline inline-flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i> All Projects
+                </a>
+                <a href="#" class="text-[#4d4adc] hover:underline inline-flex items-center">
+                    Next Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same) -->
+    <footer class="border-t border-gray-200 py-8">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+            <p>© 2026 Miracle Light. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="mailto:miraclelight11@gmail.com" class="hover:text-[#4d4adc] transition"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/miracle-light-604112242" target="_blank" class="hover:text-[#4d4adc] transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-[#4d4adc] transition"><i class="fas fa-file-pdf"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
